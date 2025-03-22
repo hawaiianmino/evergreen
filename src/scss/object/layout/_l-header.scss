@@ -1,0 +1,8 @@
+@use '../../global/' as g;
+
+body {
+  font-size: g.fz(18);
+  @include g.mq(md,max) {
+    font-size: g.fz(16);
+  }
+}

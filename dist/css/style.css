@@ -1,0 +1,146 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+ins {
+  background-color: #ff9;
+  color: #333;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #333;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #cccccc;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/**
+ * 引数のfontSizeをremに変換する関数
+ * @param fontSize フォントサイズ
+ *
+ * 例）18pxをremに変換
+ * font-size: fz(18);
+ */
+/**
+ * 引数の最大画面サイズから指定されたpx数を元にvwに変換する関数
+ * @param maxScreenSize 最大画面サイズ
+ * @param px 変換するpx数
+ * 
+ * 例）1440pxの幅に対して560pxの要素を可変させる
+ * width: vw(1440, 560);
+ */
+/**
+ * 引数のfontSizeを元に指定されたpx数をemに変換する関数
+ * @param px 変換するpx数
+ * @param fontSize フォントサイズ
+ *
+ * 例）font-sizeが24pxの要素の下に80pxのmarginをem換算で設定する
+ * margin-bottom: em(80, 24);
+ * 
+ * font-sizeが16pxであれば第２引数は省略可能
+ * margin-bottom: em(40);
+ */
+/**
+ * レスポンシブ
+ * - sm:  480px〜
+ * - md:  768px〜
+ * - lg: 1024px〜
+ * - xl: 1200px〜
+ * - xxl: 1480px〜
+ * 
+ * 例）
+ * @include mq() { ... }
+ * @include mq(xxl) { ... }
+ * @include mq(sm, max) { ... }
+ */
+body {
+  font-family: "Noto Sans JP", serif;
+}
+
+body {
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=sourcemaps/style.css.map */
