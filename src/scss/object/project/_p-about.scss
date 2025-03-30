@@ -1,0 +1,37 @@
+@use '../../global/' as g;
+// p-about 会社概要
+.p-about__inner {
+  padding-top: g.fz(108);
+  padding-bottom: g.fz(223);
+}
+.p-about-president__img-wrap {
+  margin-top: g.fz(39);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-about-president__img {
+  text-align: center;
+}
+.p-about-president__img img {
+  max-width: 310px;
+}
+.p-about-president__text {
+  line-height: 2;
+  margin-top: g.fz(33);
+  letter-spacing: .1em;
+}
+.p-about-president__message {
+  max-width: 1002px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2;
+  letter-spacing: .1em;
+  margin-top: g.fz(24);
+}
+.p-about-president__message p + p {
+  margin-top: 1em;
+}
+.p-about.bg-about {
+  background: url(../img/bg-about.png) no-repeat center / cover;
+}
