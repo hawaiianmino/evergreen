@@ -5,29 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>トップページのタイトル | Site Name</title>
+    <title>お茶の栽培から輸出まで | 有限会社エバーグリーン</title>
     <meta name="description" content="トップページのディスクリプション">
     <meta name="keywords" content="キーワード,キーワード2,キーワード3">
-    <meta property="og:title" content="トップページのタイトル | Site Name">
+    <meta property="og:title" content="お茶の栽培から輸出まで | 有限会社エバーグリーン">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.sample.com/">
+    <meta property="og:url" content="http://localhost:8080/">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:site_name" content="トップページのタイトル | Site Name">
+    <meta property="og:site_name" content="お茶の栽培から輸出まで | 有限会社エバーグリーン">
     <meta property="og:description" content="トップページのディスクリプション">
-    <meta property="og:image" content="https://www.sample.com/img/ogp.jpg?ver=c247ae7d8ab3be09">
+    <meta property="og:image" content="http://localhost:8080/img/ogp.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="website">
     <meta name="twitter:domain" content="domainName">
-    <meta name="twitter:title" content="トップページのタイトル | Site Name">
+    <meta name="twitter:title" content="お茶の栽培から輸出まで | 有限会社エバーグリーン">
     <meta name="twitter:description" content="トップページのディスクリプション">
-    <meta name="twitter:image" content="https://www.sample.com/img/ogp.jpg?ver=c247ae7d8ab3be09">
+    <meta name="twitter:image" content="http://localhost:8080/img/ogp.jpg">
     <meta property="fb:admins" content="7777777777777777">
     <meta property="fb:app_id" content="88888888888888888">
-    <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png?ver=c247ae7d8ab3be09">
-    <link rel="icon" type="image/png" href="icon-192x192.png?ver=c247ae7d8ab3be09">
+    <meta name="robots" content="noindex">
+    <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="icon-192x192.png">
     <!-- Google font--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Viga&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- style.css-->
     <link rel="stylesheet" href="./css/style.css">
     <script>
@@ -42,40 +43,119 @@
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-A4B4CDE" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <header class="header">
-      <div class="logo"><img class="logo__img" src="./img/logo.png?ver=c247ae7d8ab3be09" alt="ロゴ"></div>
-      <nav> 
-        <ul class="nav"> 
-          <li class="nav__item"> <a class="nav__link" href="#">ホーム</a></li>
-          <li class="nav__item"> <a class="nav__link" href="#">お知らせ</a></li>
-          <li class="nav__item"> <a class="nav__link" href="#">ブログ</a></li>
-          <li class="nav__item"> <a class="nav__link" href="#">コース・料金</a></li>
-        </ul>
-      </nav>
-      <div class="header_right">
-        <div class="text_wrap"> <span>平日08:00〜20:00</span>
-          <p class="phone_number">0123-456-789</p>
+    <section class="c-header-bar">
+      <div class="c-header-bar__inner">
+        <h1 class="c-header-bar__logo"><a href="#">有限会社&nbsp;エバーグリーン</a></h1>
+      </div>
+    </section>
+    <div class="c-hamburger js-hamburger"><span></span><span></span><span></span></div>
+    <div class="p-fv">
+      <div class="p-fv__inner">
+        <div class="p-fv__img-wrap">
+              <picture class="p-fv__img">
+                <source srcset="./img/fv.png" media="(min-width: 768px)"><img src="./img/fv-smp.png" alt="ファーストビュー">
+              </picture>
         </div>
-        <div class="btn_wrap"> </div><a class="btn btn--yellow" href="#">資料請求</a><a class="btn btn--blue" href="#">お問い合わせ </a>
+      </div>
+    </div>
+    <header class="l-header pc">
+      <div class="l-header__inner section-inner">
+        <nav class="p-gnav">
+          <ul class="p-gnav__wrap">
+            <li class="p-gnav__item"><a class="p-gnav__link" href="/">トップページ </a></li>
+            <li class="p-gnav__item"><a class="p-gnav__link" href="#about">会社概要 </a></li>
+            <li class="p-gnav__item"><a class="p-gnav__link" href="#business">業務内容 </a></li>
+            <li class="p-gnav__item"><a class="p-gnav__link" href="#products">取扱商品</a></li>
+            <li class="p-gnav__item"><a class="p-gnav__link" href="#enjoy">お茶を楽しむ</a></li>
+          </ul>
+        </nav>
+        <div class="l-header-btn"><a class="l-header-btn__item" href="#"> <span>japanese</span></a><a class="l-header-btn__item" href="#"><span>english</span></a></div>
+      </div>
+    </header>
+    <header class="l-header-sp sp">
+      <div class="l-header-sp__inner">
+        <nav class="p-gnav-sp">
+          <ul class="p-gnav-sp__wrap">
+            <li class="p-gnav-sp__item"><a class="p-gnav-sp__link" href="/">トップページ </a></li>
+            <li class="p-gnav-sp__item"><a class="p-gnav-sp__link" href="#about">会社概要 </a></li>
+            <li class="p-gnav-sp__item"><a class="p-gnav-sp__link" href="#business">業務内容 </a></li>
+            <li class="p-gnav-sp__item"><a class="p-gnav-sp__link" href="#products">取扱商品</a></li>
+            <li class="p-gnav-sp__item"><a class="p-gnav-sp__link" href="#enjoy">お茶を楽しむ</a></li>
+          </ul>
+        </nav>
+        <div class="l-header-btn l-header-sp-btn"><a class="l-header-btn__item l-header-sp-btn__item" href="#"><span>japanese</span></a><a class="l-header-btn__item l-header-sp-btn__item" href="#"><span>english</span></a><a class="l-header-sp-btn__contact" href="#contact"><span>お問合せ</span></a></div>
       </div>
     </header>
     <main> 
-      <section class="fv"> 
-        <div class="container"> 
-          <div class="text_wrap"> 
-            <h1 class="title">TEEFUL対策はEngress </h1>
-            <p class="sub_title">日本人へのTOEFUL指導豊かな講師陣の<br>コーチング型TEEFULスクール</p>
-            <div class="btn_wrap"> <a class="btn btn--yellor" href="#">資料請求 </a><a class="text_link" href="#">お問い合わせ </a></div>
+      <section class="p-top-about bg01" id="about">
+        <div class="p-top-about__inner section-inner">
+          <h2 class="c-section-title"><span class="c-section-title__main">About US</span><span class="c-section-title__sub">私たちについて</span></h2>
+          <div class="p-top-about__text-wrap">
+            <p class="p-top-about__text text-bold">日本文化の根幹を海外に紹介します<br>世界に届ける安心と安全</p>
+            <p class="p-top-about__text">静岡市を拠点に、日本茶の製造・輸出を行う製茶問屋です。<br>ISO22000認証取得、安全と品質にこだわり世界へ安心・安全な日本茶をお届けします。</p>
           </div>
+          <div class="c-btn p-top-about__btn"><a class="c-btn__link" href="#"><span>企業情報を詳しくみる</span></a></div>
         </div>
       </section>
-      <section class="problem"> 
-        <div class="container"> 
-          <h2 class="section_title">TOEFULでこんな悩みありませんか？</h2>
+      <section class="p-top-business bg02" id="business">
+        <div class="p-top-business__inner">
+          <h2 class="c-section-title"><span class="c-section-title__main">Business</span><span class="c-section-title__sub">業務内容</span></h2>
+          <div class="p-top-business__img-wrap">
+            <div class="p-top-business__img"><img src="./img/img-business01.png" alt="お茶と湯呑み"></div>
+            <div class="p-top-business__img"><img src="./img/img-business02.png" alt="茶葉と湯呑み"></div>
+          </div>
+          <div class="p-top-business__text-wrap">
+            <div class="p-top-business__text text-bold">茶葉栽培から輸出まで一貫体制。<br class="sp">伝統と革新、お茶の未来を創造</div>
+            <div class="p-top-business__text">茶葉の栽培、製造、輸出入、関連商品の販売まで、お茶に関するあらゆる業務をサポートします。国内外のニーズに応え、高品質な日本茶と関連商品を<br>世界中に提供しています。</div>
+          </div>
+          <div class="p-top-business__ashirai"><img src="./img/img-business03.png" alt="湯呑み"></div>
+          <div class="c-btn p-top-business__btn"><a class="c-btn__link" href="#"><span>詳しくみる</span></a></div>
+        </div>
+      </section>
+      <section class="p-top-product bg03" id="products">
+        <div class="p-top-product__inner">
+          <h2 class="c-section-title --white"><span class="c-section-title__main">Products</span><span class="c-section-title__sub">取扱商品</span></h2>
+          <div class="p-top-product__items section-inner">
+            <div class="p-top-product__item">
+              <div class="p-top-product__item-img"><img src="./img/img-top-product01.png" alt="焙煎各種"></div>
+              <p class="p-top-product__item-text">焙煎各種</p>
+            </div>
+            <div class="p-top-product__item">
+              <div class="p-top-product__item-img"><img src="./img/img-top-product02.png" alt="焙煎各種"></div>
+              <p class="p-top-product__item-text">玉露</p>
+            </div>
+            <div class="p-top-product__item">
+              <div class="p-top-product__item-img"><img src="./img/img-top-product03.png" alt="焙煎各種"></div>
+              <p class="p-top-product__item-text">各種日本茶</p>
+            </div>
+          </div>
+          <div class="c-btn p-top-product__btn"><a class="c-btn__link" href="#"><span>詳しくみる</span></a></div>
+        </div>
+      </section>
+      <section class="p-top-enjoy bg04" id="enjoy">
+        <div class="p-top-enjoy__inner">
+          <h2 class="c-section-title --white"><span class="c-section-title__main">Enjoy Tea Life</span><span class="c-section-title__sub">お茶を楽しむ</span></h2>
+          <div class="c-btn p-top-enjoy__btn"><a class="c-btn__link" href="#"><span>詳しくみる</span></a></div>
+        </div>
+      </section>
+      <section class="c-contact" id="contact">
+        <div class="c-contact__inner">
+          <h2 class="c-section-title"><span class="c-section-title__main">Contact</span><span class="c-section-title__sub">お問い合わせ</span></h2>
+          <p class="c-contact__text section-inner">お茶の卸販売やご相談は、<br class="sp">お気軽にお問い合わせください</p>
+          <div class="c-contact__btn-wrap"><a class="c-contact__btn" href="#">お問合せ </a></div>
         </div>
       </section>
     </main>
-    <footer class="footer">ここはフッターです</footer>
+    <footer class="l-footer bg05">
+      <div class="l-footer__inner section-inner">
+        <div class="l-footer__left l-footer-left">
+          <div class="l-footer-left__title-wrap"><a class="l-footer-left__title" href="#">有限会社&nbsp;エバーグリーン</a></div>
+          <p class="l-footer-left__text">〒421-1221&nbsp;<br class="sp">静岡県静岡市葵区牧ヶ谷2022番地<br>営業時間&nbsp;月〜金:&nbsp;9:00&nbsp;AM&nbsp;&#45;&nbsp;6:00&nbsp;PM</p><a class="l-footer-left__policy" href="#">プライバシーポリシー </a>
+        </div>
+        <p class="l-footer__right">Copyright(C) Ever Green. Co.LTD. <br class="sp">All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- javascript-->
     <script src="./js/bundle.js"> </script>
   </body>
 </html>

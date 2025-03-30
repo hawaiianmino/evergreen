@@ -1,0 +1,23 @@
+@use '../../global/' as g;
+
+// c-section-title セクションタイトル
+.c-section-title {
+  text-align: center;
+}
+.c-section-title__main {
+  font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: .1em;
+  display: block;
+  font-family: g.$font-english;
+}
+.c-section-title__sub {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  margin-top: g.fz(10);
+  letter-spacing: .1em;
+  display: block;
+  font-weight: 400;
+}
+.c-section-title.--white > span {
+  color: g.$white-color;
+}

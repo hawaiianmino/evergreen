@@ -1,0 +1,10 @@
+@use '../../global/' as g;
+
+// .p-fv ファーストビュー
+.p-fv img {
+  aspect-ratio: 1440 / 800;
+  object-fit: cover;
+  @include g.mq(md,max) {
+    aspect-ratio: 375 / 554;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../../global/' as g;
+
+// c-section-text サブページのメッセージセクション
+.c-section-text__message {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  line-height: 1.8;
+  letter-spacing: .1em;
+  text-align: center;
+  font-weight: 500;
+  margin-top: g.fz(24);
+}
+.c-section-text__message-sub {
+  line-height: 3;
+  letter-spacing: .1em;
+  text-align: center;
+}

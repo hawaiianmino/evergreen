@@ -1,8 +1,122 @@
 @use '../../global/' as g;
-
-body {
-  font-size: g.fz(18);
+// l-header ヘッダー
+.l-header {
+  background-color: g.$base-color;
+}
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  padding-top: g.fz(30);
+  padding-bottom: g.fz(30);
+  margin-right: auto;
+  margin-left: auto;
+}
+// l-header-btn ヘッダーのボタン
+.l-header-btn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  text-transform: capitalize;
+  @include g.mq(xl,max) {
+    flex-direction: column;
+    gap: g.fz(5);
+  }
+}
+.l-header-btn__item {
+  display: block;
+  background-color: g.$white-color;
+  padding: g.fz(12) g.fz(20) g.fz(16);
+  width: 200px;
+  text-align: center;
+  letter-spacing: .1em;
+  color: g.$text-color;
+  @include g.mq(xl,max) {
+    padding: g.fz(10) g.fz(20) g.fz(14);
+  }
+  @include g.mq(lg,max) {
+    width: 150px;
+  }
+}
+.l-header-btn__item:last-child {
+  border-left: 1px solid g.$base-color;
+  @include g.mq(xl,max) {
+    border-left: none;
+  }
+}
+.l-header-btn__item span {
+  position: relative;
+}
+.l-header-btn__item span::after {
+  content: '';
+  display: inline-block;
+  width: 21px;
+  height: 4px;
+  background: url(../img/btn-arrow.png) no-repeat center / contain;
+  position: absolute;
+  right: -25px;
+  bottom: 5px;
+}
+// l-header-sp スマホヘッダー
+.l-header-sp {
   @include g.mq(md,max) {
-    font-size: g.fz(16);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: g.$base-color;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    z-index: 150;
+  }
+}
+.l-header-sp.--active {
+  @include g.mq(md,max) {
+    visibility: visible;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+  }
+}
+.l-header-sp__inner {
+  height: 100%;
+  overflow-y: scroll;
+}
+.l-header-sp-btn {
+  @include g.mq(md,max) {
+    display: flex;
+    flex-direction: column;
+    gap: g.fz(20);
+    margin-top: g.fz(37);
+  }
+}
+.l-header-sp-btn__item {
+  @include g.mq(md,max) {
+    width: 250px;
+    padding-top: g.fz(15);
+    padding-bottom: g.fz(19);
+  }
+}
+.l-header-sp-btn__contact {
+  @include g.mq(md,max) {
+    background-color: g.$accent-color;
+    text-align: center;
+    display: block;
+    padding: g.fz(15) g.fz(20) g.fz(19);
+    width: 250px;
+    color: g.$white-color;
+    font-weight: 700;
+    letter-spacing: .1em;
+  }
+}
+.l-header-sp-btn__contact::before {
+  @include g.mq(md,max) {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    background: url(../img/icon-mail.png) no-repeat center / contain;
+    margin-right: g.fz(10);
   }
 }

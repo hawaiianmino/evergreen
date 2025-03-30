@@ -1,0 +1,26 @@
+@use '../../global/' as g;
+
+.p-gnav__wrap {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, -2.75rem + 8.3333vw, 4.75rem);
+}
+.p-gnav__link {
+  color: g.$white-color;
+  font-weight: bold;
+  letter-spacing: .3em;
+  @include g.mq(lg,max) {
+    letter-spacing: .2em;
+  }
+}
+.p-gnav-sp {
+  margin-top: g.fz(100);
+}
+.p-gnav-sp__link {
+  font-weight: 500;
+  letter-spacing: .3em;
+  color: g.$white-color;
+  padding: g.fz(16);
+  display: block;
+  text-align: center;
+}

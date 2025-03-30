@@ -1,5 +1,37 @@
 @use "../global/" as g;
 
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: g.$font-japanese;
+  color: g.$text-color;
+}
+body.--menu-open {
+  overflow: hidden;
+}
+.section-inner {
+  max-width: 1290px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: g.fz(20);
+  padding-right: g.fz(20);
+}
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+.pc {
+  @include g.mq(md,max) {
+    display: none;
+  }
+}
+.sp {
+  display: none;
+  @include g.mq(md,max) {
+    display: block;
+  }
+}
+.text-bold {
+  font-weight: 700;
 }

@@ -1,0 +1,48 @@
+@use '../../global/' as g;
+// l-footer フッター
+.l-footer__inner {
+  padding-top: g.fz(58);
+  padding-bottom: g.fz(78);
+  color: g.$white-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  @include g.mq(md,max) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: g.fz(46);
+
+  }
+}
+.l-footer-left__title {
+  font-size: g.fz(23);
+  color: g.$white-color;
+  letter-spacing: .1em;
+  @include g.mq(md,max) {
+    font-size: g.fz(18);
+  }
+}
+.l-footer-left__text {
+  font-size: g.fz(15);
+  letter-spacing: .1em;
+  line-height: 2;
+  margin-top: g.fz(15);
+}
+.l-footer-left__policy {
+  font-size: g.fz(15);
+  margin-top: g.fz(15);
+  display: block;
+  color: g.$white-color;
+  @include g.mq(md,max) {
+    margin-top: g.fz(30);
+  }
+}
+.l-footer__right {
+  letter-spacing: .1em;
+  font-size: g.fz(15);
+  line-height: 1.5;
+  @include g.mq(md,max) {
+    margin-top: g.fz(27);
+  }
+}

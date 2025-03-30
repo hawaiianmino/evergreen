@@ -1,18 +1,20 @@
 extend layouts/_default
 append value
-  - const title = "トップページのタイトル | Site Name";
+  - const title = "お茶の栽培から輸出まで | 有限会社エバーグリーン";
   - const description = "トップページのディスクリプション";
   - const keywords = "キーワード,キーワード2,キーワード3";
   - const path = ".";
   - const location = "top";
 
 block header
-  include components/layout/l_header
+  include components/component/_c_header-bar
+  include components/project/_p_fv
+  include components/layout/_l_header
 
 block main
   main 
-    include components/project/p_fv
-    include components/project/p_problem
+    include components/project/_p_top
+    include components/component/_c_contact
 
 block footer
-  include components/layout/l_footer
+  include components/layout/_l_footer

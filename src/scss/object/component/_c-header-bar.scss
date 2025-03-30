@@ -1,0 +1,45 @@
+@use '../../global/' as g;
+.c-header-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  @include g.mq(md,max) {
+    position: fixed;
+  }
+}
+.c-header-bar.--scrolled {
+  background-color: g.$white-color;
+  transition: background-color .2s ease-in-out;
+}
+.c-header-bar.--scrolled .c-header-bar__logo a {
+  color: g.$text-color;
+  transition: color .2s ease-in-out;
+}
+.c-header-bar__inner {
+  max-width: 1290px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: g.fz(50) g.fz(20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include g.mq(md,max) {
+    padding: g.fz(30) g.fz(30);
+  }
+}
+.c-header-bar__logo a {
+  color: g.$white-color;
+  font-weight: 700;
+  letter-spacing: .1em;
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+}
+.c-header-bar__logo {
+  transition: all .2s ease-in-out;
+}
+.c-header-bar__logo.--active {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}

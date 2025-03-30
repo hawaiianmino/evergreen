@@ -1,0 +1,162 @@
+@use '../../global/' as g;
+// p-top トップページメイン
+
+// 私達について（p-top-about）
+.p-top-about__inner {
+  padding-top: g.fz(106);
+  padding-bottom: g.fz(129);
+  @include g.mq(md,max) {
+    padding-top: g.fz(53);
+    padding-bottom: g.fz(64);
+  }
+}
+.p-top-about__text-wrap {
+  margin-top: g.fz(45);
+  line-height: 3;
+  text-align: center;
+  letter-spacing: .2em;
+  @include g.mq(md,max) {
+    line-height: 2.2;
+  }
+}
+.p-top-about__text:nth-child(2) {
+  @include g.mq(md,max) {
+    margin-top: g.fz(15);
+  }
+}
+.p-top-about__btn {
+  margin-top: g.fz(45);
+}
+
+// 業務内容（p-top-business）
+.p-top-business__inner {
+  padding-top: g.fz(132);
+  padding-bottom: g.fz(116);
+  @include g.mq(md,max) {
+    padding-top: g.fz(54);
+    padding-bottom: g.fz(72);
+  }
+}
+.p-top-business__text-wrap {
+  line-height: 3;
+  text-align: center;
+  max-width: 744px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: .2em;
+  padding-left: g.fz(20);
+  padding-right: g.fz(20);
+  @include g.mq(md,max) {
+    line-height: 2.2;
+  }
+}
+.p-top-business__img-wrap {
+  display: flex;
+  margin-top: g.fz(108);
+}
+.p-top-business__text-wrap {
+  margin-top: g.fz(60);
+}
+.p-top-business__text:nth-child(2) {
+  @include g.mq(md,max) {
+    margin-top: g.fz(22);
+  }
+}
+.p-top-business__ashirai {
+  text-align: center;
+  margin-top: g.fz(22);
+}
+.p-top-business__ashirai img {
+  aspect-ratio: 249 / 235;
+  object-fit: cover;
+  max-width: 249px;
+  @include g.mq(md,max) {
+    max-width: 117px;
+  }
+}
+.p-top-business__btn {
+  margin-top: g.fz(58);
+}
+
+// 取扱商品（p-top-product）
+.p-top-product__inner {
+  padding-top: g.fz(97);
+  padding-bottom: g.fz(108);
+  @include g.mq(md,max) {
+    padding-top: g.fz(59);
+    padding-bottom: g.fz(79);
+  }
+}
+.p-top-product__items {
+  display: flex;
+  gap: g.fz(26);
+  margin-top: g.fz(45);
+  @include g.mq(md,max) {
+    flex-direction: column;
+  }
+}
+.p-top-product__item {
+  padding: g.fz(30) g.fz(60) g.fz(27);
+  background-color: g.$white-color;
+  @include g.mq(md,max) {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    padding: g.fz(27) g.fz(30);
+  }
+}
+.p-top-product__item-img img {
+  aspect-ratio: 276 / 219;
+  object-fit: cover;
+  max-width: 276px;
+  @include g.mq(md,max) {
+    max-width: 113px;
+  }
+}
+.p-top-product__item-text {
+  text-align: center;
+  font-size: g.fz(18);
+  letter-spacing: .1em;
+  margin-top: g.fz(9);
+}
+.p-top-product__btn {
+  margin-top: g.fz(80);
+}
+
+// お茶を楽しむ（p-top-enjoy）
+.p-top-enjoy__inner {
+  padding-top: g.fz(209);
+  padding-bottom: g.fz(204);
+  margin-top: g.fz(128);
+  @include g.mq(md,max) {
+    margin-top: 0;
+    padding-top: g.fz(137);
+  padding-bottom: g.fz(130);
+  }
+}
+.c-btn.p-top-enjoy__btn {
+  margin-top: g.fz(60);
+}
+
+// 背景
+.bg01 {
+  background: url(../img/bg-top-about.png) no-repeat center / cover;
+}
+.bg02 {
+  background: url(../img/bg-top-business.png) no-repeat center / cover;
+  @include g.mq(md,max) {
+    background: url(../img/bg-top-business-sp.png) no-repeat center / cover;
+  }
+}
+.bg03 {
+  background: url(../img/bg-top-product.png) no-repeat center / cover;
+}
+.bg04 {
+  background: url(../img/bg-top-enjoy.png) no-repeat center / cover;
+  @include g.mq(md,max) {
+    background: url(../img/bg-top-enjoy-sp.png) no-repeat center / cover;
+  }
+}
+.bg05 {
+  background: g.$base-color;
+}
