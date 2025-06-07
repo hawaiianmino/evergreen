@@ -1,0 +1,87 @@
+include ../../mixin/_picture
+section.p-enjoy.bg-pattern01
+  .p-enjoy__inner.section-inner
+    include ../component/_c_section-text
+    ul.p-enjoy__link.p-enjoy-link
+      li.p-enjoy-link__button
+        a(href="#kind") お茶の種類 
+      li.p-enjoy-link__button
+        a(href="#brew") お茶の淹れ方 
+      li.p-enjoy-link__button
+        a(href="#health") 茶の健康機能
+    section.p-enjoy__contents.p-enjoy-contents
+      h3.c-table-box-title.p-enjoy-contents__title#kind
+        span お茶の種類
+      .p-enjoy-contents__title 知るほどに楽しい、お茶の多彩な魅力
+      p.p-enjoy-contents__text 玉露、煎茶、番茶、抹茶など、それぞれの特徴と魅力を紹介します。<br>気分やシーンに合わせて、様々なお茶の味わいを紹介します。
+      .p-enjoy-contents__figure
+        img(src=imgPath + "enjoy/img-teamap.png", alt="お茶の図")
+    section.p-enjoy__brew.p-enjoy-brew
+      h3.c-table-box-title.p-enjoy-brew__title#brew
+        span お茶の淹れ方
+      .p-enjoy-brew__title お茶の味を引き出す、至福の淹れ方
+      p.p-enjoy-brew__text お茶の種類に合わせた最適な温度と時間で、<br class="sp">最高の一杯を淹れるコツを紹介します。<br>基本から応用まで、美味しいお茶の淹れ方を<br class="sp">マスターしましょう。
+      .p-enjoy__illust.p-enjoy-illust
+        .p-enjoy-illust__title 煎茶
+        .p-enjoy-illust__slider#js-swiper
+          ul.p-enjoy-illust__items.swiper-wrapper
+            li.p-enjoy-illust__item.p-enjoy-illust-item.swiper-slide
+              .p-enjoy-illust-item__img
+                img(src=imgPath + "enjoy/img-illust01.jpg", alt="お湯を沸かし70〜80℃に湯冷ましする")
+              p.p-enjoy-illust-item__text <span>❶</span>お湯を沸かし70〜80℃に湯冷ましする
+            li.p-enjoy-illust__item.p-enjoy-illust-item.swiper-slide
+              .p-enjoy-illust-item__img
+                img(src=imgPath + "enjoy/img-illust02.jpg", alt="茶葉をいれる")
+              p.p-enjoy-illust-item__text <span>❷</span>茶葉をいれる
+            li.p-enjoy-illust__item.p-enjoy-illust-item.swiper-slide
+              .p-enjoy-illust-item__img
+                img(src=imgPath + "enjoy/img-illust03.jpg", alt="急須に注ぎ1〜2分まつ")
+              p.p-enjoy-illust-item__text <span>❸</span>急須に注ぎ1〜2分まつ
+            li.p-enjoy-illust__item.p-enjoy-illust-item.swiper-slide
+              .p-enjoy-illust-item__img
+                img(src=imgPath + "enjoy/img-illust04.jpg", alt="注ぎ分ける")
+              p.p-enjoy-illust-item__text <span>❹</span>注ぎ分ける
+      .p-enjoy-illust
+        .p-enjoy-illust__title 冷茶
+        .p-enjoy-illust__slider#js-swiper
+          ul.p-enjoy-illust__items.swiper-wrapper
+            li.p-enjoy-illust__item.p-enjoy-illust-item.swiper-slide
+              .p-enjoy-illust-item__img
+                img(src=imgPath + "enjoy/img-illust05.jpg", alt="冷水ポットに水を注ぐ")
+              p.p-enjoy-illust-item__text <span>❶</span>冷水ポットに水を注ぐ
+            li.p-enjoy-illust__item.p-enjoy-illust-item.swiper-slide
+              .p-enjoy-illust-item__img
+                img(src=imgPath + "enjoy/img-illust06.jpg", alt="水1Lに対し10〜15g程の茶葉を入れる")
+              p.p-enjoy-illust-item__text <span>❷</span>水1Lに対し10〜15g程の茶葉を入れる
+            li.p-enjoy-illust__item.p-enjoy-illust-item.swiper-slide
+              .p-enjoy-illust-item__img
+                img(src=imgPath + "enjoy/img-illust07.jpg", alt="冷蔵庫で冷やす")
+              p.p-enjoy-illust-item__text <span>❸</span>冷蔵庫で冷やす
+            li.p-enjoy-illust__item.p-enjoy-illust-item.swiper-slide
+              .p-enjoy-illust-item__img
+                img(src=imgPath + "enjoy/img-illust08.jpg", alt="約3時間ほどで完成")
+              p.p-enjoy-illust-item__text <span>❹</span>約3時間ほどで完成
+    section.p-enjoy__health.p-enjoy-health
+      h3.c-table-box-title.p-enjoy-health__box-title#health
+        span 茶の健康機能
+      p.p-enjoy-health__title お茶を楽しむ ～お茶の効能～<br>健康と美、心身を癒すお茶の恵み
+      p.p-enjoy-health__text リラックス効果、抗酸化作用、ダイエット効果など、お茶の健康効果を紹介します。<br>日々の生活にお茶を取り入れ、心身ともに健やかな毎日を送りましょう。
+      .p-enjoy-health__img
+        img(src=imgPath + "enjoy/img-greentea.jpg", alt="湯呑みを持った人の画像")
+      .p-enjoy-health__table
+        table.p-enjoy-table
+          tr
+            th カテキン
+            td 強い抗酸化作用があって、動脈硬化、がん、 高血 圧など最近増えている生活習慣病の予防に効果が あります。 また、 殺菌作用も強く、 口臭予防、 虫 歯予防、食中毒の予防にもなります。
+          tr
+            th カフェイン
+            td 眠気を飛ばしたり、脳や心臓の働きを活性化する 効果があります。 カフェインは取りすぎると頭痛が 起こり易くなると言われているため、過剰な摂取 には注意が必要です。
+          tr
+            th テアニン
+            td お茶の葉だけに含まれているアミノ酸で、 心と体をリラックスさせる効果があります。
+          tr
+            th ビタミンC
+            td がん、風邪の予防に効果があります。 1日に必要なビタミンCの量は大人で約50mg。 お茶10杯分に相当します。
+          tr
+            th ミネラル
+            td フッ素 亜鉛 マンガンなどのミネラルもお茶に は含まれています。 なかでもフッ素は歯の表面を強くして、 虫歯にならない抵抗力を付ける効果が あります。

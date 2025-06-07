@@ -2,15 +2,20 @@
 
 // c-section-text サブページのメッセージセクション
 .c-section-text__message {
-  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  font-size: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
   line-height: 1.8;
   letter-spacing: .1em;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   margin-top: g.fz(24);
 }
 .c-section-text__message-sub {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
   line-height: 3;
   letter-spacing: .1em;
   text-align: center;
+  margin-top: g.fz(10);
+  @include g.mq(md,max) {
+    line-height: 2.2;
+  }
 }

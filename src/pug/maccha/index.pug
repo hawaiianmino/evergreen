@@ -1,0 +1,20 @@
+extend ../layouts/_default
+append value
+  - const title = "お茶の栽培から輸出まで | 有限会社エバーグリーン";
+  - const description = "トップページのディスクリプション";
+  - const keywords = "キーワード,キーワード2,キーワード3";
+  - const path = "..";
+  - const location = "maccha";
+
+block header
+  include ../components/component/_c_header-bar
+  include ../components/layout/_l_header
+  include ../components/component/_c_fv-sub
+
+block main
+  main
+    include ../components/project/_p_maccha
+    include ../components/component/_c_contact
+
+block footer
+  include ../components/layout/_l_footer

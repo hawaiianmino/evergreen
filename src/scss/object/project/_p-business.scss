@@ -1,0 +1,143 @@
+@use '../../global/' as g;
+// .p-business
+.p-business__inner {
+  padding-top: g.fz(100);
+  padding-bottom: g.fz(289);
+  max-width: 1040px;
+  margin-right: auto;
+  margin-left: auto;
+  @include g.mq(md,max) {
+    padding-top: g.fz(38);
+    padding-bottom: g.fz(79);
+  }
+}
+.p-business-box-title {
+  margin-top: g.fz(110);
+  line-height: 1.5;
+  @include g.mq(md,max) {
+    margin-top: g.fz(60);
+  }
+}
+.p-business-section-wrap:first-of-type {
+  margin-top: g.fz(58);
+}
+.p-business-section-wrap + .p-business-section-wrap {
+  margin-top: g.fz(72);
+}
+.p-business__section-title {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  color: g.$base-color;
+  line-height: 3;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-align: center;
+  padding: g.fz(14);
+  background-color: g.$bg-section-title;
+  box-shadow: 0 2px 2px 0 rgba($color: #000000, $alpha: .15);
+}
+.p-business__section-text {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  line-height: 3;
+  letter-spacing: .1em;
+  margin-top: g.fz(44);
+  @include g.mq(md,max) {
+    margin-top: g.fz(24);
+  }
+}
+.p-business-flow {
+  padding: g.fz(100);
+  background-color: g.$white-color;
+  @include g.mq(md,max) {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.p-business__flow {
+  margin-top: g.fz(68);
+  @include g.mq(md,max) {
+    margin-top: g.fz(30);
+  }
+}
+// .p-business-boxes
+.p-business-boxes {
+  margin-top: g.fz(97);
+  @include g.mq(md,max) {
+    margin-top: g.fz(77);
+  }
+}
+.p-business-box + .p-business-box {
+  margin-top: g.fz(32);
+}
+.p-business-box.bg-color {
+  background-color:rgba($color: #47B023, $alpha: 0.1);
+  border-radius: 10px;
+}
+.p-business-box__inner {
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: g.fz(56) g.fz(20) g.fz(67);
+  @include g.mq(md,max) {
+    padding: g.fz(34) g.fz(28);
+  }
+}
+.p-business-box__title {
+  font-size: clamp(1.125rem, 0.8169rem + 1.3146vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+}
+.p-business-box__title::before {
+  content: "◼︎";
+  font-size: clamp(1.375rem, 1.1989rem + 0.7512vw, 1.875rem);
+  margin-right: g.fz(0);
+}
+.p-business-box__lists {
+  margin-top: g.fz(27);
+}
+.p-business-box__list {
+  font-size: g.fz(18);
+  letter-spacing: .1em;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+}
+.p-business-box__list + .p-business-box__list {
+  margin-top: g.fz(21);
+}
+.p-business-box__list::before {
+  content: "";
+  display: inline-block;
+  width: g.fz(34);
+  height: g.fz(34);
+  margin-right: g.fz(25);
+  flex-shrink: 0;
+  @include g.mq(md,max) {
+    width: g.fz(30);
+    height: g.fz(30);
+  }
+}
+// リスト番号
+.p-business-boxes .p-business-box:first-of-type .p-business-box__list:first-child:before {
+  background: url("../img/business/number01.png") no-repeat center / contain;
+}
+.p-business-boxes .p-business-box:first-of-type .p-business-box__list:nth-child(2):before {
+  background: url("../img/business/number02.png") no-repeat center / contain;
+}
+.p-business-boxes .p-business-box:first-of-type .p-business-box__list:nth-child(3):before {
+  background: url("../img/business/number03.png") no-repeat center / contain;
+}
+.p-business-boxes .p-business-box:nth-of-type(2) .p-business-box__list:nth-child(1):before {
+  background: url("../img/business/number04.png") no-repeat center / contain;
+}
+.p-business-boxes .p-business-box:nth-of-type(2) .p-business-box__list:nth-child(2):before {
+  background: url("../img/business/number05.png") no-repeat center / contain;
+}
+.p-business-boxes .p-business-box:nth-of-type(2) .p-business-box__list:nth-child(3):before {
+  background: url("../img/business/number06.png") no-repeat center / contain;
+}
+.p-business-boxes .p-business-box:nth-of-type(3) .p-business-box__list:nth-child(1):before {
+  background: url("../img/business/number07.png") no-repeat center / contain;
+}
+.p-business-boxes .p-business-box:nth-of-type(3) .p-business-box__list:nth-child(2):before {
+  background: url("../img/business/number08.png") no-repeat center / contain;
+}

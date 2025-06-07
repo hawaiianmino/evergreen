@@ -1,7 +1,15 @@
-section.c-header-bar
-  .c-header-bar__inner
-    h1.c-header-bar__logo
-      a(href="#") 有限会社&nbsp;エバーグリーン
+if location=="top"
+  section.c-header-bar
+    .c-header-bar__inner
+      h1.c-header-bar__logo
+        a(href=domain) 有限会社&nbsp;エバーグリーン
+else
+  section.c-header-bar.c-header-bar-sub
+    .c-header-bar__inner
+      h1.c-header-bar__logo
+        a(href=domain) 有限会社&nbsp;エバーグリーン
+      a(href="#").c-header-bar__contact
+        span お問合せ
 .c-hamburger.js-hamburger
   span
   span

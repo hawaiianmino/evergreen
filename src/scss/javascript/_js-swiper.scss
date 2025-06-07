@@ -1,0 +1,7 @@
+@use '../global/' as g;
+.swiper-slide {
+  width: calc((100% - 39px) / 4);
+  @include g.mq(md,max) {
+    width: 100%;
+  }
+}

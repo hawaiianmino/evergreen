@@ -1,0 +1,248 @@
+@use '../../global/' as g;
+// .p-enjoy お茶を楽しむ
+.p-enjoy__inner {
+  padding-top: g.fz(98);
+  padding-bottom: g.fz(189);
+  @include g.mq(md,max) {
+    padding-top: g.fz(29);
+    padding-bottom: g.fz(95);
+  }
+}
+// .p-enjoy-link リンクボタン
+.p-enjoy-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include g.mq(md,max) {
+    flex-direction: column;
+  }
+}
+.p-enjoy__link {
+  margin-top: g.fz(115);
+  @include g.mq(md,max) {
+    margin-top: g.fz(50);
+  }
+}
+.p-enjoy-link__button {
+  width: calc(100% / 3);
+  @include g.mq(md,max) {
+    width: 100%;
+  }
+}
+.p-enjoy-link__button a {
+  display: block;
+  font-size: g.fz(18);
+  color: g.$white-color;
+  font-weight: 700;
+  letter-spacing: .3em;
+  background-color: g.$base-color;
+  padding: g.fz(38);
+  text-align: center;
+  position: relative;
+  @include g.mq(md,max) {
+    padding: g.fz(19);
+  }
+}
+.p-enjoy-link__button:nth-child(n + 2) a {
+  border-left: 1px solid g.$white-color;
+  @include g.mq(md,max) {
+    border-left: none;
+    border-top: 1px solid g.$white-color;
+  }
+}
+.p-enjoy-link__button a::after {
+  content: "";
+  display: inline-block;
+  width: g.fz(20);
+  height: g.fz(4);
+  background: url(../img/enjoy/arrow.png) no-repeat center / contain;
+  position: absolute;
+  right: g.fz(48);
+  bottom: g.fz(43);
+  @include g.mq(md,max) {
+    right: 5%;
+    bottom: 46%;
+  }
+}
+// .p-enjoy-contents お茶の種類
+.p-enjoy__contents {
+  margin-top: g.fz(93);
+  @include g.mq(md,max) {
+    margin-top: g.fz(52);
+  }
+}
+.p-enjoy-contents__title {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: .1em;
+  margin-top: g.fz(44);
+}
+.p-enjoy-contents__text {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  line-height: 1.6;
+  letter-spacing: .08em;
+  text-align: center;
+  margin-top: g.fz(25);
+  @include g.mq(md,max) {
+    line-height: 2.2;
+  }
+}
+.p-enjoy-contents__figure {
+  margin-top: g.fz(49);
+}
+// .p-enjoy-brew（お茶の淹れ方）
+.p-enjoy__brew {
+  margin-top: g.fz(188);
+  @include g.mq(md,max) {
+    margin-top: g.fz(50);
+  }
+}
+.p-enjoy-brew__title {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-align: center;
+  margin-top: g.fz(40);
+  @include g.mq(md,max) {
+    margin-top: g.fz(29);
+  }
+}
+.p-enjoy-brew__text {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: .1em;
+  margin-top: g.fz(15);
+  @include g.mq(md,max) {
+    line-height: 2.2;
+    letter-spacing: .08em;
+    margin-top: g.fz(23);
+  }
+}
+.p-enjoy__illust {
+  margin-top: g.fz(40);
+}
+.p-enjoy-illust__slider {
+  overflow: hidden;
+}
+.p-enjoy-illust + .p-enjoy-illust {
+  margin-top: g.fz(55);
+}
+.p-enjoy-illust__title {
+  font-size: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+  color: g.$white-color;
+  letter-spacing: .3em;
+  font-weight: 700;
+  background-color: g.$dark-green;
+  padding: g.fz(24);
+  text-align: center;
+}
+.p-enjoy-illust__items {
+  display: flex;
+  gap: g.fz(13);
+  margin-top: g.fz(48);
+  @include g.mq(md,max) {
+    gap: 0;
+  }
+}
+.p-enjoy-illust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-enjoy-illust-item__text {
+  line-height: 1.5;
+  letter-spacing: .1em;
+  margin-top: g.fz(26);
+}
+.p-enjoy-illust-item__text span {
+  color: g.$dark-green;
+}
+// .p-enjoy-health 茶の健康機能
+.p-enjoy-health__box-title {
+  margin-top: g.fz(71);
+}
+.p-enjoy-health__title {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: g.fz(40);
+  @include g.mq(md,max) {
+    margin-top: g.fz(29);
+  }
+}
+.p-enjoy-health__text {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: .1em;
+  margin-top: g.fz(15);
+  @include g.mq(md,max) {
+    line-height: 2.2;
+    letter-spacing: .08em;
+    margin-top: g.fz(23);
+  }
+}
+.p-enjoy-health__img {
+  margin-top: g.fz(70);
+}
+
+
+
+// テーブルのCSS
+.p-enjoy-health__table {
+  margin-top: g.fz(80);
+}
+.p-enjoy-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-enjoy-table th,
+.p-enjoy-table td {
+  line-height: 2;
+  border: 1px solid #ddd;
+  @include g.mq(md,max) {
+    display: block;
+  }
+}
+.p-enjoy-table th {
+  color: g.$white-color;
+  background-color: g.$dark-green;
+  letter-spacing: .1em;
+  text-align: center;
+  width: calc((330 / 1000)*100%);
+  vertical-align: middle;
+  @include g.mq(md,max) {
+    width: 100%;
+    padding: g.fz(20);
+  }
+}
+.p-enjoy-table td {
+  padding: g.fz(31);
+  width: calc((670 / 1000)*100%);
+  background-color: g.$white-color;
+  letter-spacing: .1em;
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  @include g.mq(md,max) {
+    width: 100%;
+    padding: g.fz(26) g.fz(20);
+  }
+}
+.p-enjoy-table tr:first-child td {
+  @include g.mq(md,max) {
+    margin-top: g.fz(-1);
+  }
+}
+.p-enjoy-table tr:nth-child(n + 2) th,
+.p-enjoy-table tr:nth-child(n + 2) td {
+  @include g.mq(md,max) {
+    margin-top: g.fz(-1);
+  }
+}

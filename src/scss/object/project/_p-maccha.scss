@@ -1,0 +1,45 @@
+@use "../../global/" as g;
+// .p-maccha お茶を楽しむ
+.p-maccha__inner {
+  padding-top: g.fz(70);
+  padding-bottom: g.fz(250);
+  @include g.mq(md,max) {
+    padding-top: g.fz(30);
+    padding-bottom: g.fz(141);
+  }
+}
+.p-maccha__pdf-button {
+  margin-top: g.fz(50);
+  @include g.mq(md,max) {
+    margin-top: g.fz(26);
+  }
+}
+.p-maccha__figure {
+  margin-top: g.fz(139);
+  @include g.mq(md,max) {
+    margin-top: 0;
+  }
+}
+.p-maccha__contents {
+  margin-top: g.fz(125);
+  @include g.mq(md,max) {
+    margin-top: g.fz(68);
+  }
+}
+.p-maccha__text {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  line-height: 3;
+  letter-spacing: .08em;
+  text-align: center;
+  margin-top: g.fz(54);
+  @include g.mq(md,max) {
+    line-height: 2.2;
+    margin-top: g.fz(30);
+  }
+}
+.p-maccha__button {
+  margin-top: g.fz(54);
+  @include g.mq(md,max) {
+    margin-top: g.fz(31);
+  }
+}

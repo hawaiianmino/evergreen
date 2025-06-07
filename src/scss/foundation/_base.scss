@@ -11,7 +11,7 @@ body.--menu-open {
   overflow: hidden;
 }
 .section-inner {
-  max-width: 1290px;
+  max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
   padding-left: g.fz(20);
@@ -34,4 +34,11 @@ img {
 }
 .text-bold {
   font-weight: 700;
+}
+.bg-pattern01 {
+  background: url(../img/bg-pattern01.png) no-repeat center / cover;
+}
+a:hover {
+  opacity: .8;
+  transition: opacity .2s ease-in-out;
 }

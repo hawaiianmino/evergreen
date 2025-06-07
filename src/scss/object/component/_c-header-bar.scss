@@ -5,9 +5,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  @include g.mq(md,max) {
-    position: fixed;
-  }
+  position: fixed;
 }
 .c-header-bar.--scrolled {
   background-color: g.$white-color;
@@ -21,7 +19,7 @@
   max-width: 1290px;
   margin-left: auto;
   margin-right: auto;
-  padding: g.fz(50) g.fz(20);
+  padding: g.fz(42) g.fz(20) g.fz(42) g.fz(20);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,4 +40,30 @@
   visibility: hidden;
   opacity: 0;
   transition: all .2s ease-in-out;
+}
+// お問合せボタン
+.c-header-bar__contact {
+  display: block;
+  width: 254px;
+  padding: 15px;
+  background-color: g.$accent-color;
+  color: g.$white-color;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: .1em;
+  @include g.mq(md,max) {
+    display: none;
+  }
+}
+.c-header-bar__contact::before {
+  background: url(../img/icon-mail.png) no-repeat center / contain;
+    content: "";
+    display: inline-block;
+    height: 12px;
+    margin-right: g.fz(10);
+    width: 15px;
+}
+// サブページのみのCSS
+.c-header-bar-sub .c-header-bar__logo a {
+  color: g.$text-color;
 }

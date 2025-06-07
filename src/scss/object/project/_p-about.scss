@@ -22,7 +22,7 @@
   letter-spacing: .1em;
 }
 .p-about-president__message {
-  max-width: 1002px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   line-height: 2;
@@ -32,6 +32,104 @@
 .p-about-president__message p + p {
   margin-top: 1em;
 }
-.p-about.bg-about {
-  background: url(../img/bg-about.png) no-repeat center / cover;
+
+// テーブルのCSS
+.p-about__table1 {
+  margin-top: g.fz(80);
+}
+.p-about-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-about-table th,
+.p-about-table td {
+  padding-top: g.fz(31);
+  padding-bottom: g.fz(31);
+  line-height: 2;
+  border: 1px solid #ddd;
+  @include g.mq(md,max) {
+    display: block;
+  }
+}
+.p-about-table th {
+  color: g.$white-color;
+  background-color: g.$base-color;
+  letter-spacing: .1em;
+  text-align: center;
+  width: calc((330 / 1000)*100%);
+  vertical-align: middle;
+  @include g.mq(md,max) {
+    width: 100%;
+  }
+}
+.p-about-table td {
+  padding-left: g.fz(31);
+  padding-right: g.fz(31);
+  width: calc((670 / 1000)*100%);
+  background-color: g.$white-color;
+  @include g.mq(md,max) {
+    width: 100%;
+  }
+}
+.p-about-table tr:first-child td {
+  @include g.mq(md,max) {
+    margin-top: g.fz(-1);
+  }
+}
+.p-about-table tr:nth-child(n + 2) th,
+.p-about-table tr:nth-child(n + 2) td {
+  @include g.mq(md,max) {
+    margin-top: g.fz(-1);
+  }
+}
+.p-about__box-title {
+  margin-top: g.fz(95);
+}
+.p-about__table2 {
+  margin-top: g.fz(50);
+}
+.p-about-certification {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 4);
+  @include g.mq(md,max) {
+    width: 100%;
+  }
+}
+.p-about-certification:first-child .p-about-certification__img {
+  max-width: 129px;
+}
+.p-about-certification:nth-child(2) .p-about-certification__img {
+  max-width: 129px;
+}
+.p-about-certification:nth-child(3) .p-about-certification__img {
+  max-width: 81px;
+}
+
+// マップのCSS
+.p-about__map {
+  margin-top: g.fz(50);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-about-map iframe {
+  aspect-ratio: 1000 / 500;
+  @include g.mq(md,max) {
+    aspect-ratio: 348 / 338;
+  }
+}
+.p-about-map__address {
+  letter-spacing: .1em;
+  text-align: center;
+  margin: g.fz(50);
+  line-height: 1.8;
+  @include g.mq(md,max) {
+    margin-top: g.fz(21);
+  }
 }

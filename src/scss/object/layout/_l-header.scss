@@ -3,6 +3,9 @@
 .l-header {
   background-color: g.$base-color;
 }
+.l-header.l-header--margin-top {
+  margin-top: g.fz(130);
+}
 .l-header__inner {
   display: flex;
   align-items: center;
@@ -10,6 +13,9 @@
   padding-bottom: g.fz(30);
   margin-right: auto;
   margin-left: auto;
+  max-width: 1290px;
+  padding-left: g.fz(20);
+  padding-right: g.fz(20);
 }
 // l-header-btn ヘッダーのボタン
 .l-header-btn {
@@ -69,7 +75,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all .2s ease-in-out;
-    z-index: 150;
+    z-index: 180;
   }
 }
 .l-header-sp.--active {

@@ -1,0 +1,23 @@
+@use '../../global/' as g;
+.c-pdf-button {
+  display: flex;
+  color: g.$white-color;
+  line-height: 1.6;
+  letter-spacing: .1em;
+  background-color: g.$pdf-button;
+  font-weight: 700;
+  padding: g.fz(15);
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.c-pdf-button::after {
+  content: "";
+  display: inline-block;
+  width: g.fz(20);
+  height: g.fz(20);
+  background: url(../img/product/pdf.png) no-repeat center / contain;
+  margin-left: g.fz(10);
+}

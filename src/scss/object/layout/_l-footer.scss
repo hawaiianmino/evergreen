@@ -42,7 +42,21 @@
   letter-spacing: .1em;
   font-size: g.fz(15);
   line-height: 1.5;
+  margin-top: g.fz(19);
   @include g.mq(md,max) {
     margin-top: g.fz(27);
+  }
+}
+.l-footer__page-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+  z-index: 150;
+  cursor: pointer;
+  @include g.mq(md,max) {
+    right: 30px;
+    bottom: 15px;
   }
 }

@@ -4,6 +4,7 @@
 .p-fv img {
   aspect-ratio: 1440 / 800;
   object-fit: cover;
+  object-position: top 0 right 0;
   @include g.mq(md,max) {
     aspect-ratio: 375 / 554;
   }

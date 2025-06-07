@@ -4,6 +4,7 @@
 .c-contact__inner {
   padding-top: g.fz(88);
   padding-bottom: g.fz(98);
+  background-color: g.$bg-color;
   @include g.mq(md,max) {
     padding-top: g.fz(66);
     padding-bottom: g.fz(68);

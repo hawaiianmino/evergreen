@@ -1,36 +1,57 @@
-header.l-header.pc
-  .l-header__inner.section-inner
-    nav.p-gnav
-      ul.p-gnav__wrap
-        li.p-gnav__item
-          a.p-gnav__link(href="/") トップページ 
-        li.p-gnav__item
-          a.p-gnav__link(href="#about") 会社概要 
-        li.p-gnav__item
-          a.p-gnav__link(href="#business") 業務内容 
-        li.p-gnav__item
-          a.p-gnav__link(href="#products") 取扱商品
-        li.p-gnav__item
-          a.p-gnav__link(href="#enjoy") お茶を楽しむ
-    .l-header-btn
-      a(href="#").l-header-btn__item 
-        span japanese
-      a(href="#").l-header-btn__item
-        span english
+if location == "top"
+  header.l-header.pc
+    .l-header__inner
+      nav.p-gnav
+        ul.p-gnav__wrap
+          li.p-gnav__item
+            a.p-gnav__link(href=domain) トップページ 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/about") 会社概要 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/business") 業務内容 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/product") 取扱商品
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/enjoy") お茶を楽しむ
+      .l-header-btn
+        a(href="#").l-header-btn__item 
+          span japanese
+        a(href="#").l-header-btn__item
+          span english
+else
+  header.l-header.l-header--margin-top.pc
+    .l-header__inner
+      nav.p-gnav
+        ul.p-gnav__wrap
+          li.p-gnav__item
+            a.p-gnav__link(href=domain) トップページ 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/about") 会社概要 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/business") 業務内容 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/product") 取扱商品
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/enjoy") お茶を楽しむ
+      .l-header-btn
+        a(href="#").l-header-btn__item 
+          span japanese
+        a(href="#").l-header-btn__item
+          span english
 header.l-header-sp.sp
   .l-header-sp__inner
     nav.p-gnav-sp
       ul.p-gnav-sp__wrap
         li.p-gnav-sp__item
-          a.p-gnav-sp__link(href="/") トップページ 
+          a.p-gnav-sp__link(href=domain) トップページ 
         li.p-gnav-sp__item
-          a.p-gnav-sp__link(href="#about") 会社概要 
+          a.p-gnav-sp__link(href=domain + "/about") 会社概要 
         li.p-gnav-sp__item
-          a.p-gnav-sp__link(href="#business") 業務内容 
+          a.p-gnav-sp__link(href=domain + "/business") 業務内容 
         li.p-gnav-sp__item
-          a.p-gnav-sp__link(href="#products") 取扱商品
+          a.p-gnav-sp__link(href=domain + "/product") 取扱商品
         li.p-gnav-sp__item
-          a.p-gnav-sp__link(href="#enjoy") お茶を楽しむ
+          a.p-gnav-sp__link(href=domain + "/enjoy") お茶を楽しむ
     .l-header-btn.l-header-sp-btn
       a(href="#").l-header-btn__item.l-header-sp-btn__item
         span japanese
