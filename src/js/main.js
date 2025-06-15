@@ -111,25 +111,6 @@ $(function () {
   };
 
   /*************************
-   * スクロールしたらヘッダーを上から出す
-   **************************/
-  $(window).on("scroll", function () {
-    var scroll = $(window).scrollTop();
-
-    if (scroll > 200) {
-      $("#js-fixed-header").addClass("--active");
-    } else {
-      $("#js-fixed-header").removeClass("--active");
-    }
-
-    if (scroll > 1200) {
-      $("#js-top-fixed-header").addClass("--active");
-    } else {
-      $("#js-top-fixed-header").removeClass("--active");
-    }
-  });
-
-  /*************************
    * Illustのスライダー
    **************************/
   // if (window.matchMedia("(max-width: 767px)").matches) {

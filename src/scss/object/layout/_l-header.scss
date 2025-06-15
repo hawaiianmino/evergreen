@@ -2,10 +2,12 @@
 // l-header ヘッダー
 .l-header {
   background-color: g.$base-color;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
 }
-// .l-header.l-header--margin-top {
-//   margin-top: g.fz(130);
-// }
 .l-header__inner {
   display: flex;
   align-items: center;
@@ -125,21 +127,4 @@
     background: url(../img/icon-mail.png) no-repeat center / contain;
     margin-right: g.fz(10);
   }
-}
-// スクロールしたらヘッダーが出現
-#js-fixed-header,
-#js-top-fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-}
-#js-fixed-header.--active,
-#js-top-fixed-header.--active {
-  transition: all .2s ease-in;
-  visibility: visible;
-  opacity: 1;
 }

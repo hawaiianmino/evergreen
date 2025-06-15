@@ -576,6 +576,11 @@ a:hover {
 
 .l-header {
   background-color: #2B7E0B;
+  left: 0;
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 
 .l-header__inner {
@@ -715,24 +720,6 @@ a:hover {
     margin-right: 0.625rem;
     width: 15px;
   }
-}
-
-#js-fixed-header,
-#js-top-fixed-header {
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  visibility: hidden;
-  z-index: 10;
-}
-
-#js-fixed-header.--active,
-#js-top-fixed-header.--active {
-  opacity: 1;
-  transition: all 0.2s ease-in;
-  visibility: visible;
 }
 
 .l-footer__inner {
