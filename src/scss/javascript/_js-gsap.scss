@@ -1,0 +1,24 @@
+
+@use '../global/' as g;
+// GSAPアニメーション
+.js-blurAnimation {
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(20px);
+}
+.js-fadeUpItem,
+.js-fadeUpSingle
+{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+}
+.js-fv-slider {
+  opacity: 0;
+  visibility: hidden;
+}
+.js-fv-logo {
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(20px);
+}

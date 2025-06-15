@@ -20,6 +20,9 @@
 }
 .p-business-section-wrap:first-of-type {
   margin-top: g.fz(58);
+  @include g.mq(md,max) {
+    margin-top: g.fz(35);
+  }
 }
 .p-business-section-wrap + .p-business-section-wrap {
   margin-top: g.fz(72);
@@ -42,6 +45,7 @@
   margin-top: g.fz(44);
   @include g.mq(md,max) {
     margin-top: g.fz(24);
+    line-height: 2.2;
   }
 }
 .p-business-flow {
@@ -57,6 +61,11 @@
   @include g.mq(md,max) {
     margin-top: g.fz(30);
   }
+}
+.p-business-flow__img {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 // .p-business-boxes
 .p-business-boxes {
@@ -78,7 +87,7 @@
   margin-right: auto;
   padding: g.fz(56) g.fz(20) g.fz(67);
   @include g.mq(md,max) {
-    padding: g.fz(34) g.fz(28);
+    padding: g.fz(34) g.fz(22);
   }
 }
 .p-business-box__title {
@@ -95,7 +104,7 @@
   margin-top: g.fz(27);
 }
 .p-business-box__list {
-  font-size: g.fz(18);
+  font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
   letter-spacing: .1em;
   display: flex;
   align-items: center;
@@ -114,6 +123,7 @@
   @include g.mq(md,max) {
     width: g.fz(30);
     height: g.fz(30);
+    margin-right: g.fz(10);
   }
 }
 // リスト番号

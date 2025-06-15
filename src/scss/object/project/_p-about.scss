@@ -3,6 +3,10 @@
 .p-about__inner {
   padding-top: g.fz(108);
   padding-bottom: g.fz(223);
+  @include g.mq(md,max) {
+    padding-top: g.fz(42);
+    padding-bottom: g.fz(72);
+  }
 }
 .p-about-president__img-wrap {
   margin-top: g.fz(39);
@@ -30,7 +34,7 @@
   margin-top: g.fz(24);
 }
 .p-about-president__message p + p {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 // テーブルのCSS
@@ -47,32 +51,37 @@
 }
 .p-about-table th,
 .p-about-table td {
-  padding-top: g.fz(31);
-  padding-bottom: g.fz(31);
   line-height: 2;
   border: 1px solid #ddd;
+  letter-spacing: .1em;
   @include g.mq(md,max) {
     display: block;
+    border: none;
   }
 }
 .p-about-table th {
+  padding-top: g.fz(31);
+  padding-bottom: g.fz(31);
   color: g.$white-color;
   background-color: g.$base-color;
-  letter-spacing: .1em;
+  letter-spacing: .2em;
   text-align: center;
   width: calc((330 / 1000)*100%);
   vertical-align: middle;
   @include g.mq(md,max) {
     width: 100%;
+    padding-top: g.fz(9);
+    padding-bottom: g.fz(9);
   }
 }
 .p-about-table td {
-  padding-left: g.fz(31);
-  padding-right: g.fz(31);
+  padding: g.fz(31);
   width: calc((670 / 1000)*100%);
   background-color: g.$white-color;
   @include g.mq(md,max) {
     width: 100%;
+    background-color: transparent;
+    padding: g.fz(20) 0;
   }
 }
 .p-about-table tr:first-child td {
@@ -88,6 +97,9 @@
 }
 .p-about__box-title {
   margin-top: g.fz(95);
+  @include g.mq(md,max) {
+    margin-top: g.fz(55);
+  }
 }
 .p-about__table2 {
   margin-top: g.fz(50);
@@ -99,6 +111,11 @@
   width: calc(100% / 4);
   @include g.mq(md,max) {
     width: 100%;
+  }
+}
+.p-about-certification + .p-about-certification {
+  @include g.mq(md,max) {
+    margin-top: g.fz(30);
   }
 }
 .p-about-certification:first-child .p-about-certification__img {
@@ -127,7 +144,7 @@
 .p-about-map__address {
   letter-spacing: .1em;
   text-align: center;
-  margin: g.fz(50);
+  margin-top: g.fz(50);
   line-height: 1.8;
   @include g.mq(md,max) {
     margin-top: g.fz(21);

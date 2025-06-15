@@ -53,9 +53,15 @@
 .p-top-business__img-wrap {
   display: flex;
   margin-top: g.fz(108);
+  @include g.mq(md,max) {
+    margin-top: g.fz(26);
+  }
 }
 .p-top-business__text-wrap {
   margin-top: g.fz(60);
+  @include g.mq(md,max) {
+    margin-top: g.fz(23);
+  }
 }
 .p-top-business__text:nth-child(2) {
   @include g.mq(md,max) {
@@ -76,6 +82,9 @@
 }
 .p-top-business__btn {
   margin-top: g.fz(58);
+  @include g.mq(md,max) {
+    margin-top: g.fz(41);
+  }
 }
 
 // 取扱商品（p-top-product）
@@ -98,35 +107,13 @@
   }
 }
 .p-top-product__main-text {
-  font-size: clamp(1.125rem, 1.037rem + 0.3756vw, 1.375rem);
+  font-size: clamp(1rem, 0.868rem + 0.5634vw, 1.375rem);
   font-weight: bold;
 }
-// .p-top-product__items {
-//   display: flex;
-//   gap: g.fz(26);
-//   margin-top: g.fz(45);
-//   @include g.mq(md,max) {
-//     flex-direction: column;
-//   }
-// }
-// .p-top-product__item {
-//   padding: g.fz(30) g.fz(60) g.fz(27);
-//   background-color: g.$white-color;
-//   @include g.mq(md,max) {
-//     display: flex;
-//     align-items: center;
-//     gap: 29px;
-//     padding: g.fz(27) g.fz(30);
-//   }
-// }
-// .p-top-product__item-img img {
-//   aspect-ratio: 276 / 219;
-//   object-fit: cover;
-//   max-width: 276px;
-//   @include g.mq(md,max) {
-//     max-width: 113px;
-//   }
-// }
+.p-top-product__sub-text {
+  line-height: 3;
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+}
 .p-top-product__item-text {
   text-align: center;
   font-size: g.fz(18);

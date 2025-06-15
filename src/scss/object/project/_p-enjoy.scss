@@ -20,7 +20,7 @@
 .p-enjoy__link {
   margin-top: g.fz(115);
   @include g.mq(md,max) {
-    margin-top: g.fz(50);
+    margin-top: g.fz(34);
   }
 }
 .p-enjoy-link__button {
@@ -35,7 +35,7 @@
   color: g.$white-color;
   font-weight: 700;
   letter-spacing: .3em;
-  background-color: g.$base-color;
+  background-color: g.$dark-green;
   padding: g.fz(38);
   text-align: center;
   position: relative;
@@ -89,11 +89,14 @@
   }
 }
 .p-enjoy-contents__figure {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: g.fz(49);
 }
 // .p-enjoy-brew（お茶の淹れ方）
 .p-enjoy__brew {
-  margin-top: g.fz(188);
+  margin-top: g.fz(80);
   @include g.mq(md,max) {
     margin-top: g.fz(50);
   }
@@ -123,9 +126,13 @@
 .p-enjoy__illust {
   margin-top: g.fz(40);
 }
-.p-enjoy-illust__slider {
-  overflow: hidden;
-}
+// .p-enjoy-illust__slider {
+//   overflow: hidden;
+//   @include g.mq(md,max) {
+//     margin-left: calc(50% - 50vw);
+//     margin-right: calc(50% - 50vw);
+//   }
+// }
 .p-enjoy-illust + .p-enjoy-illust {
   margin-top: g.fz(55);
 }
@@ -140,21 +147,31 @@
 }
 .p-enjoy-illust__items {
   display: flex;
+  flex-wrap: wrap;
   gap: g.fz(13);
   margin-top: g.fz(48);
   @include g.mq(md,max) {
-    gap: 0;
+    gap: g.fz(15) g.fz(10);
+    margin-top: g.fz(20);
   }
 }
 .p-enjoy-illust-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: calc((100% - 39px) / 4);
+  @include g.mq(md,max) {
+    width: calc((100% - 13px) / 2);
+  }
 }
 .p-enjoy-illust-item__text {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
   line-height: 1.5;
   letter-spacing: .1em;
   margin-top: g.fz(26);
+  @include g.mq(md,max) {
+    margin-top: g.fz(10);
+  }
 }
 .p-enjoy-illust-item__text span {
   color: g.$dark-green;
@@ -188,6 +205,20 @@
 }
 .p-enjoy-health__img {
   margin-top: g.fz(70);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  @include g.mq(md,max) {
+    margin-top: g.fz(46);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
+.p-enjoy-health__img img {
+  @include g.mq(md,max) {
+    height: 238px;
+    object-fit: cover;
+  }
 }
 
 

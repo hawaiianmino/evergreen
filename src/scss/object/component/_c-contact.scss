@@ -49,5 +49,6 @@
   @include g.mq(md,max) {
     width: 11px;
     height: 9px;
+    margin-right: g.fz(10);
   }
 }

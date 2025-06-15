@@ -12,6 +12,9 @@
   max-width: 320px;
   margin-left: auto;
   margin-right: auto;
+  @include g.mq(md,max) {
+    padding: g.fz(11) g.fz(8);
+  }
 }
 .c-pdf-button::after {
   content: "";
@@ -20,4 +23,7 @@
   height: g.fz(20);
   background: url(../img/product/pdf.png) no-repeat center / contain;
   margin-left: g.fz(10);
+}
+.c-pdf-button.no-icon::after {
+  display: none;
 }

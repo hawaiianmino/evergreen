@@ -18,8 +18,46 @@ if location == "top"
           span japanese
         a(href="#").l-header-btn__item
           span english
+  div.l-header.pc#js-top-fixed-header
+    .l-header__inner
+      nav.p-gnav
+        ul.p-gnav__wrap
+          li.p-gnav__item
+            a.p-gnav__link(href=domain) トップページ 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/about") 会社概要 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/business") 業務内容 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/product") 取扱商品
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/enjoy") お茶を楽しむ
+      .l-header-btn
+        a(href="#").l-header-btn__item 
+          span japanese
+        a(href="#").l-header-btn__item
+          span english
 else
-  header.l-header.l-header--margin-top.pc
+  header.l-header.pc
+    .l-header__inner
+      nav.p-gnav
+        ul.p-gnav__wrap
+          li.p-gnav__item
+            a.p-gnav__link(href=domain) トップページ 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/about") 会社概要 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/business") 業務内容 
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/product") 取扱商品
+          li.p-gnav__item
+            a.p-gnav__link(href=domain + "/enjoy") お茶を楽しむ
+      .l-header-btn
+        a(href="#").l-header-btn__item 
+          span japanese
+        a(href="#").l-header-btn__item
+          span english
+  div.l-header.pc#js-fixed-header
     .l-header__inner
       nav.p-gnav
         ul.p-gnav__wrap

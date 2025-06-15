@@ -1,19 +1,27 @@
-@use '../../global/' as g;
-.c-header-bar {
+@use "../../global/" as g;
+.c-header-bar.c-top-header-bar {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  position: fixed;
+}
+.c-header-bar.c-header-bar-sub {
+  @include g.mq(md, max) {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    position: fixed;
+  }
 }
 .c-header-bar.--scrolled {
   background-color: g.$white-color;
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 .c-header-bar.--scrolled .c-header-bar__logo a {
   color: g.$text-color;
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .c-header-bar__inner {
   max-width: 1290px;
@@ -23,23 +31,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @include g.mq(md,max) {
+  @include g.mq(md, max) {
     padding: g.fz(30) g.fz(30);
   }
 }
 .c-header-bar__logo a {
   color: g.$white-color;
   font-weight: 700;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
 }
 .c-header-bar__logo {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .c-header-bar__logo.--active {
   visibility: hidden;
   opacity: 0;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 // お問合せボタン
 .c-header-bar__contact {
@@ -50,18 +58,18 @@
   color: g.$white-color;
   text-align: center;
   font-weight: 500;
-  letter-spacing: .1em;
-  @include g.mq(md,max) {
+  letter-spacing: 0.1em;
+  @include g.mq(md, max) {
     display: none;
   }
 }
 .c-header-bar__contact::before {
   background: url(../img/icon-mail.png) no-repeat center / contain;
-    content: "";
-    display: inline-block;
-    height: 12px;
-    margin-right: g.fz(10);
-    width: 15px;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  margin-right: g.fz(10);
+  width: 15px;
 }
 // サブページのみのCSS
 .c-header-bar-sub .c-header-bar__logo a {

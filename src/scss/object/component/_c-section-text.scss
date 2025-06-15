@@ -8,6 +8,9 @@
   text-align: center;
   font-weight: 700;
   margin-top: g.fz(24);
+  @include g.mq(md,max) {
+    margin-top: g.fz(25);
+  }
 }
 .c-section-text__message-sub {
   font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
@@ -17,5 +20,6 @@
   margin-top: g.fz(10);
   @include g.mq(md,max) {
     line-height: 2.2;
+    margin-top: g.fz(25);
   }
 }

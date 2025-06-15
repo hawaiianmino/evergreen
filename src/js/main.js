@@ -73,15 +73,8 @@ $(function () {
 
       var target = $(this.hash);
       var speed = 500;
-      var windowWidth = $(window).width(); // 画面幅を取得
-
-      if (windowWidth >= 768) {
-        // 768px以上の場合（PC表示とみなす）
-        var headerHeight = $(".c-header-bar").outerHeight(); // ヘッダーの高さを取得
-        var adjust = headerHeight;
-      } else {
-        var adjust = 0;
-      }
+      var headerHeight = $(".c-header-bar").outerHeight(); // ヘッダーの高さを取得
+      var adjust = headerHeight + 20;
 
       $("html, body").animate(
         {
@@ -98,11 +91,11 @@ $(function () {
    **************************/
   const scrollTop = () => {
     $(window).on("scroll", function () {
-      if ($(this).scrollTop() > 100) {
+      if ($(this).scrollTop() > 800) {
         // 100pxスクロールしたら表示
-        $("#js-page-top").fadeIn();
+        $("#js-page-top").addClass("--active");
       } else {
-        $("#js-page-top").fadeOut();
+        $("#js-page-top").removeClass("--active");
       }
     });
     // ボタンがクリックされたときにスムーズスクロールを実行
@@ -117,16 +110,105 @@ $(function () {
     });
   };
 
-  // Illustのスライダー
-  if(window.matchMedia("(max-width: 767px)").matches){
-    const illustSlider = new Swiper("#js-swiper", {
-      loop: false, //繰り返し指定
-      spaceBetween: 15, //スライド感の余白
-      slidesPerView: 1.2,
-      centeredSlides: true, //スライダーの最初と最後に余白を追加せずスライドが真ん中に配置される
-    });
-  }
+  /*************************
+   * スクロールしたらヘッダーを上から出す
+   **************************/
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
 
+    if (scroll > 200) {
+      $("#js-fixed-header").addClass("--active");
+    } else {
+      $("#js-fixed-header").removeClass("--active");
+    }
+
+    if (scroll > 1000) {
+      $("#js-top-fixed-header").addClass("--active");
+    } else {
+      $("#js-top-fixed-header").removeClass("--active");
+    }
+  });
+
+  /*************************
+   * Illustのスライダー
+   **************************/
+  // if (window.matchMedia("(max-width: 767px)").matches) {
+  //   const illustSlider = new Swiper("#js-swiper", {
+  //     loop: false, //繰り返し指定
+  //     spaceBetween: 15, //スライド感の余白
+  //     slidesPerView: 1.2,
+  //     centeredSlides: true, //スライダーの最初と最後に余白を追加せずスライドが真ん中に配置される
+  //   });
+  // }
+
+  /*************************
+   * アニメーション
+   **************************/
+  // タイトルアニメーション
+  gsap.utils.toArray(".js-blurAnimation").forEach((target) => {
+    gsap.to(target, {
+      autoAlpha: 1,
+      ease: "power2.out",
+      duration: 1,
+      filter: "blur(0px)",
+      scrollTrigger: {
+        trigger: target,
+        start: "top 90%",
+      },
+    });
+  });
+
+  // 単独でのfadeupアニメーション
+  gsap.utils.toArray(".js-fadeUpSingle").forEach((target) => {
+    gsap.to(target, {
+      y: 0,
+      autoAlpha: 1,
+      stagger: 0.5,
+      ease: "power2.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: target,
+        start: "top 90%",
+      },
+    });
+  });
+
+  // 複数要素のfadeupアニメーション
+  let mm = gsap.matchMedia();
+  mm.add("(min-width: 768px)", () => {
+    gsap.utils.toArray(".js-fadeUpTrigger").forEach((trigger) => {
+      let target = trigger.querySelectorAll(":scope .js-fadeUpItem");
+      // 上から
+      gsap.to(target, {
+        y: 0,
+        autoAlpha: 1,
+        stagger: 0.2,
+        ease: "power2.out",
+        duration: 1,
+        scrollTrigger: {
+          trigger: target,
+          start: "top 90%",
+        },
+      });
+    });
+  });
+  // SP表示
+  mm.add("(max-width: 767px)", () => {
+    let targets = document.querySelectorAll(".js-fadeUpItem");
+    targets.forEach((target) => {
+      gsap.to(target, {
+        y: 0,
+        autoAlpha: 1,
+        stagger: 0.2,
+        ease: "power2.out",
+        duration: 1,
+        scrollTrigger: {
+          trigger: target,
+          start: "top 90%",
+        },
+      });
+    });
+  });
 
   hamburger();
   scrollChange();

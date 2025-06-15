@@ -85,18 +85,21 @@
   justify-content: center;
   gap: g.fz(64) g.fz(20);
   flex-wrap: wrap;
+  margin-top: g.fz(74);
   @include g.mq(md,max) {
     gap: g.fz(10);
     justify-content: flex-start;
+    margin-top: g.fz(28);
   }
 }
 .p-product-item {
   width: calc((100% - 60px) / 4);
   display: flex;
   flex-direction: column;
-  margin-top: g.fz(74);
   @include g.mq(md,max) {
     width: calc((100% - 10px) / 2);
+    padding: g.fz(15);
+    background: g.$white-color;
   }
 }
 .p-product-item__title {
