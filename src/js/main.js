@@ -122,7 +122,7 @@ $(function () {
       $("#js-fixed-header").removeClass("--active");
     }
 
-    if (scroll > 1000) {
+    if (scroll > 1200) {
       $("#js-top-fixed-header").addClass("--active");
     } else {
       $("#js-top-fixed-header").removeClass("--active");
